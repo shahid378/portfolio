@@ -9,8 +9,7 @@ import CertificateSlider from './homepage-comps/CertificateSlider'
 
 const HomePage = () => {
     const certificates = [
-        {image: '/images/certificates/diploma-pensamiento-logico.webp'},
-        
+        {image: '/images/certificates/newtoncertificate.webp'},        
     ];
 
 
