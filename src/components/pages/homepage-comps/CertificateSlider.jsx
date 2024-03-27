@@ -63,7 +63,7 @@ const CertificateSlider = ({ certificates }) => {
                 <Slider {...settings} className="grid w-[90%] lg:w-full mx-auto">
                     {certificates.map((certificate, index) => (
                     <div onClick={() => openCertificateModal(certificate.image)} key={index} className="p-4 cursor-zoom-in">
-                        <img src={certificate.image} alt="Certificate}" className="mx-auto w-full h-[200px] lg:h-[220px] rounded-md object-contain" />
+                        <img src={certificate.image} alt="Certificate" className="mx-auto w-full h-[200px] lg:h-[220px] rounded-md object-contain" />
                     </div>
                 ))}
                 </Slider>
