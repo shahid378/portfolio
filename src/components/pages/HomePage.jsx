@@ -9,7 +9,7 @@ import CertificateSlider from './homepage-comps/CertificateSlider'
 
 const HomePage = () => {
     const certificates = [
-        {image: '/images/certificates/newtoncertificate.png'},        
+        {image: '/portfolio/images/certificates/newtoncertificate.png'},        
     ];
 
 
