@@ -1,18 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-import callerai from '/images/projectsImages/callerai.webp'
+import { projects } from "../../../utils/constants";
 
 const AllProjects = () => {
-
-    const projects = [
-        {
-            id: 1,
-            src: callerai,
-            demo: 'https://shahid378.github.io/callerai/',
-            code: 'https://github.com/shahid378/callerai'
-        },
-    ]
 
     const handleClickDemo = (demoUrl) => {
         const newWindow = window.open(demoUrl, '_blank');

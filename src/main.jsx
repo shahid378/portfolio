@@ -5,8 +5,6 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
 const basename = '/portfolio/';
-// const basename = '';
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

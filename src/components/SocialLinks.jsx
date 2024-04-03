@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { basicInfo } from "../utils/constants";
 
 const SocialLinks = () => {
 
@@ -13,7 +14,7 @@ const SocialLinks = () => {
                 LinkedIn <FaLinkedin size={30} />
                 </>
             ),
-            href: 'https://www.linkedin.com/in/moshahid378',
+            href: basicInfo.linkedIn,
             style: 'rounded-tr-md'
         },
         {
@@ -23,7 +24,7 @@ const SocialLinks = () => {
                 GitHub <FaGithub size={30} />
                 </>
             ),
-            href: 'https://github.com/shahid378'
+            href: basicInfo.gitHub
         },
         {
             id: 3,
@@ -32,7 +33,7 @@ const SocialLinks = () => {
                 Mail <HiOutlineMail size={30} />
                 </>
             ),
-            href: 'mailto:shahid.mansoori.378@gmail.com'
+            href: basicInfo.mailLink
         },
         {
             id: 4,
@@ -41,7 +42,7 @@ const SocialLinks = () => {
                 Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: 'Resume_Shahid.pdf',
+            href: basicInfo.resumeLink,
             style: 'rounded-br-md',
             download: true
         }

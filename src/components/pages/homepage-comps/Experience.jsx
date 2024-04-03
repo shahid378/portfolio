@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll';
+import ExperienceComponent from "./ExperienceComponent";
 const experience = () =>{
     return (
         <section name='Experience'
@@ -11,7 +12,9 @@ const experience = () =>{
                     <h2 className='text-4xl sm:text-5xl font-bold inline border-b-4 border-primary-color/40'>Experience</h2>
                 </div>
 
-            
+                <div>
+                    <ExperienceComponent/>
+                </div>
         </div>
             <ScrollLink to="Projects" smooth duration={500} className='absolute bottom-2 -left-full md:left-1/2 md:-translate-x-1/2 cursor-pointer hover:text-primary-color'>
                 <i className='bx bx-chevron-down text-7xl text-gray-400 animate-bounce font hover:text-primary-color'></i>
