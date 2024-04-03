@@ -10,6 +10,11 @@ import CertificateSlider from './homepage-comps/CertificateSlider'
 import certificateImgs from './../../utils/constants'
 
 const HomePage = () => {
+    const certificatesImgs = [
+        {image: '/portfolio/images/certificates/newtoncertificate.png'},        
+    ];
+    // let certificatesImgs = certificateImgs
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -23,7 +28,7 @@ const HomePage = () => {
             <Experience/>
             <MyProjects />
             <Techs />
-            <CertificateSlider certificates={certificateImgs} />
+            <CertificateSlider certificates={certificatesImgs} />
             <Contact />
         </>
     )
