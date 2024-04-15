@@ -69,7 +69,7 @@ export const basicInfo={
   knowMoreText2 : 'This experience has given me incredible opportunities to collaborate with diverse teams and shoulder substantial responsibilities. As the last line of defense before appliaction went live, I honed my skills in working effectively with large teams and ensuring top-notch results.',
   profilePic: '/portfolio/images/moshahidpic.png',
   countryIcon:"/icons/indiamapicon.jpg" ,
-  resumeLink:'/Resume_Shahid.pdf'
+  resumeLink:'/portfolio/Resume_Shahid.pdf'
 
 }
 
