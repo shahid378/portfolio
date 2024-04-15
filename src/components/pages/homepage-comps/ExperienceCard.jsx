@@ -87,7 +87,7 @@ const Skill = styled.div`
     font-size: 12px;
   }
 `;
-
+console.log('')
 const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
