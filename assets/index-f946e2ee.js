@@ -141,7 +141,7 @@ Error generating stack: `+o.message+`
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
-`,AL=tt.div`
+`;console.log("");const AL=tt.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
