@@ -124,8 +124,8 @@ export default function Work() {
   return (
     <Section id="work">
       <SectionHeading
-        eyebrow={isTech ? 'Selected work' : 'Samples'}
-        title={isTech ? 'Things I have shipped' : 'Selected writing'}
+        eyebrow="Selected work"
+        title={isTech ? 'Things I have shipped' : 'Things I have made'}
         lead={
           isTech
             ? 'Production systems, with public links so you can check the work rather than take my word for it.'

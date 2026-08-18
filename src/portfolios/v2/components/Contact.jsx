@@ -11,11 +11,11 @@ export default function Contact() {
       <div className="rounded-3xl border border-hairline bg-surface-raised/50 p-8 sm:p-14">
         <SectionHeading
           eyebrow="Contact"
-          title={isTech ? 'Have something you need built?' : 'Have something you need written?'}
+          title={isTech ? 'Have something you need built?' : 'Have something you need made?'}
           lead={
             isTech
               ? 'Freelance, contract or full-time. Tell me the problem and I will tell you honestly whether I am the right person for it.'
-              : 'Sketches, scripts, punch-up or a script that needs unsticking. Send me the brief.'
+              : 'A script, a reel, a shoot, or an idea that needs pulling apart. Commissions and collaborations both welcome — send me the brief.'
           }
         />
 

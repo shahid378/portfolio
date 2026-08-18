@@ -5,6 +5,7 @@ import { experience, education } from './tech/experience'
 import { skillGroups } from './tech/skills'
 import { services as creativeServices } from './creative/services'
 import { samples } from './creative/samples'
+import { manifesto, marquee } from './creative/manifesto'
 
 /*
  * One entry point for content. Sections read from what this returns rather than
@@ -19,6 +20,8 @@ const content = {
     experience,
     education,
     skillGroups,
+    manifesto: null,
+    marquee: [],
   },
   creative: {
     persona: personas.creative,
@@ -27,6 +30,8 @@ const content = {
     experience: [],
     education: null,
     skillGroups: [],
+    manifesto,
+    marquee,
   },
 }
 

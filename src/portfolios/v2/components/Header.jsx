@@ -11,8 +11,8 @@ const NAV = {
     { id: 'contact', label: 'Contact' },
   ],
   creative: [
-    { id: 'services', label: 'What I write' },
-    { id: 'work', label: 'Samples' },
+    { id: 'services', label: 'What I do' },
+    { id: 'work', label: 'Work' },
     { id: 'contact', label: 'Contact' },
   ],
 }

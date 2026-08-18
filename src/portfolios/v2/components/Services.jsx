@@ -11,12 +11,12 @@ export default function Services() {
   return (
     <Section id="services">
       <SectionHeading
-        eyebrow={isTech ? 'Services' : 'What I write'}
-        title={isTech ? 'What I can build for you' : 'What I can write for you'}
+        eyebrow={isTech ? 'Services' : 'What I do'}
+        title={isTech ? 'What I can build for you' : 'What I can make for you'}
         lead={
           isTech
             ? 'Everything below is work I have shipped to production, not a list of things I have read about.'
-            : 'Formats I write in, and what you get when you bring me a brief.'
+            : 'Bring me a brief, a rough idea, or a shoot that needs a face. Anything marked new is something I am building into, and I would rather say so.'
         }
       />
 
@@ -30,7 +30,20 @@ export default function Services() {
             transition={{ duration: 0.45, delay: i * 0.08, ease: 'easeOut' }}
             className="group flex flex-col rounded-2xl border border-hairline bg-surface-raised/60 p-6 transition-colors hover:border-accent/40"
           >
-            <h3 className="text-lg font-semibold text-ink">{service.title}</h3>
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="text-lg font-semibold text-ink">{service.title}</h3>
+              {/* Said plainly rather than implied, so nothing here overclaims. */}
+              {service.nascent && (
+                <span className="mt-0.5 shrink-0 rounded-full border border-hairline px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em] text-ink-faint">
+                  New
+                </span>
+              )}
+            </div>
+
+            {service.hook && (
+              <p className="mt-3 font-serif text-xl leading-snug text-accent">{service.hook}</p>
+            )}
+
             <p className="mt-3 text-sm leading-relaxed text-ink-muted">{service.summary}</p>
 
             <ul className="mt-5 space-y-2">

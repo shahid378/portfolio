@@ -41,17 +41,19 @@ export const personas = {
   creative: {
     id: 'creative',
     label: 'Creative',
-    role: 'Writer · Comedy, Screenplay & Sketch',
-    tagline: 'The other half of my brain writes.',
+    role: 'Writer · Creator · Collaborator',
+    tagline: 'The other half of my brain makes things.',
     pitch:
-      'Story, comedy, sketch and screenplay writing. Same instinct for structure I use in engineering, ' +
-      'pointed at character, timing and the shape of a joke.',
-    cta: { label: "Let's write something", href: 'mailto:shahid.mansoori.378@gmail.com' },
+      'Writing, short-form content, on-camera work and the kind of brainstorming that turns a rough ' +
+      'idea into something worth making. Same instinct for structure I use in engineering, pointed at ' +
+      'character, timing and the shape of a joke.',
+    cta: { label: "Let's make something", href: 'mailto:shahid.mansoori.378@gmail.com' },
     themeColor: '#f4ecdd',
     seo: {
-      title: 'Mo Shahid — Writer: Comedy, Screenplay & Sketch',
+      title: 'Mo Shahid — Writer, Creator & Collaborator',
       description:
-        'Story, comedy, sketch and screenplay writing. Available for freelance writing commissions.',
+        'Writing, reels and short-form content, on-camera work and creative brainstorming. ' +
+        'Available for commissions and collaborations.',
     },
   },
 }
