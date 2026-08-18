@@ -45,15 +45,20 @@
   --app-hairline: rgba(255, 255, 255, 0.09);
 }
 
+/*
+ * Creative is a light editorial theme on purpose: against the dark engineering
+ * side the toggle should read as a different person, not a warmer shade of the
+ * same one. Only these values change — components use the semantic tokens.
+ */
 [data-persona='creative'] {
-  --app-surface: #12100c;
-  --app-surface-raised: #1b1813;
-  --app-ink: #f7f1e6;
-  --app-ink-muted: #bcae99;
-  --app-ink-faint: #7d7263;
-  --app-accent: #f0a03c;
-  --app-accent-soft: rgba(240, 160, 60, 0.14);
-  --app-hairline: rgba(255, 240, 220, 0.11);
+  --app-surface: #f4ecdd;
+  --app-surface-raised: #fbf6ea;
+  --app-ink: #1c1712;
+  --app-ink-muted: #5d5347;
+  --app-ink-faint: #8d8173;
+  --app-accent: #a8321f;
+  --app-accent-soft: rgba(168, 50, 31, 0.09);
+  --app-hairline: rgba(28, 23, 18, 0.16);
 }
 
 @layer base {
@@ -81,4 +86,21 @@
     background: var(--app-accent);
     color: var(--app-surface);
   }
+
+  /* Editorial voice for the writing side: section headings set in serif. */
+  [data-persona='creative'] h1,
+  [data-persona='creative'] h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+/*
+ * Paper grain, creative only. Inline SVG turbulence rather than an image, so it
+ * adds texture without a network request.
+ */
+[data-persona='creative'] .persona-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }

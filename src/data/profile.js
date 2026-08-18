@@ -29,6 +29,7 @@ export const personas = {
       '5+ years shipping React and Vue at scale — storefront infrastructure serving 100+ retail brands, ' +
       'sub-100ms server-rendered pages, and LLM features that real customers use every day.',
     cta: { label: 'Start a project', href: 'mailto:shahid.mansoori.378@gmail.com' },
+    themeColor: '#07080b',
     seo: {
       title: 'Mo Shahid — Full-Stack Engineer, React & Agentic AI',
       description:
@@ -46,6 +47,7 @@ export const personas = {
       'Story, comedy, sketch and screenplay writing. Same instinct for structure I use in engineering, ' +
       'pointed at character, timing and the shape of a joke.',
     cta: { label: "Let's write something", href: 'mailto:shahid.mansoori.378@gmail.com' },
+    themeColor: '#f4ecdd',
     seo: {
       title: 'Mo Shahid — Writer: Comedy, Screenplay & Sketch',
       description:

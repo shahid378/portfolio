@@ -44,6 +44,12 @@ export default function PersonaProvider({ children }) {
       document.head.appendChild(tag)
     }
     tag.setAttribute('content', description)
+
+    // Keep mobile browser chrome in step with the theme.
+    const themeTag = document.querySelector('meta[name="theme-color"]')
+    if (themeTag && content.persona.themeColor) {
+      themeTag.setAttribute('content', content.persona.themeColor)
+    }
   }, [content])
 
   // Browser back/forward should move between personas too.

@@ -42,7 +42,7 @@ function PortfolioBody() {
 export default function PortfolioV2() {
   return (
     <PersonaProvider>
-      <div className="min-h-screen bg-surface font-sans text-ink antialiased">
+      <div className="persona-grain min-h-screen bg-surface font-sans text-ink antialiased">
         <PortfolioBody />
       </div>
     </PersonaProvider>

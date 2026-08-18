@@ -5,7 +5,12 @@ import { usePersona } from '../usePersona'
 // Split so three.js never enters the initial bundle.
 const HeroScene = lazy(() => import('./HeroScene'))
 
-const ACCENT = { tech: '#0dfc4b', creative: '#f0a03c' }
+// Creative is a light theme, so the scene draws in dark ink and needs more
+// opacity to hold up against paper; tech glows against near-black.
+const SCENE = {
+  tech: { accent: '#0dfc4b', coreOpacity: 0.35, pointOpacity: 0.75, drift: 1 },
+  creative: { accent: '#7a2c1c', coreOpacity: 0.5, pointOpacity: 0.55, drift: 0.6 },
+}
 
 // Static stand-in used on phones, reduced-motion, weak devices and while the
 // 3D chunk loads. Pure CSS, so it costs nothing.
@@ -31,10 +36,7 @@ export default function HeroVisual() {
           cut through the headline. */}
       <div className="absolute inset-y-0 right-0 w-full md:w-[62%]">
         <Suspense fallback={<HeroPoster />}>
-          <HeroScene
-            accent={ACCENT[personaId] ?? ACCENT.tech}
-            drift={personaId === 'creative' ? 0.6 : 1}
-          />
+          <HeroScene {...(SCENE[personaId] ?? SCENE.tech)} />
         </Suspense>
       </div>
 

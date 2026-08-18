@@ -9,7 +9,7 @@ import * as THREE from 'three'
  * toggle produces a visible physical shift.
  */
 
-function ParticleField({ color, drift }) {
+function ParticleField({ color, drift, opacity }) {
   const ref = useRef()
 
   // Fixed seed-free random cloud, generated once.
@@ -41,13 +41,13 @@ function ParticleField({ color, drift }) {
         size={0.028}
         sizeAttenuation
         depthWrite={false}
-        opacity={0.75}
+        opacity={opacity}
       />
     </Points>
   )
 }
 
-function Core({ color, drift }) {
+function Core({ color, drift, opacity }) {
   const ref = useRef()
 
   useFrame((state, delta) => {
@@ -62,12 +62,12 @@ function Core({ color, drift }) {
 
   return (
     <Icosahedron ref={ref} args={[1.7, 1]}>
-      <meshBasicMaterial color={color} wireframe transparent opacity={0.35} />
+      <meshBasicMaterial color={color} wireframe transparent opacity={opacity} />
     </Icosahedron>
   )
 }
 
-export default function HeroScene({ accent, drift = 1 }) {
+export default function HeroScene({ accent, drift = 1, coreOpacity = 0.35, pointOpacity = 0.75 }) {
   const color = useMemo(() => new THREE.Color(accent), [accent])
 
   return (
@@ -79,8 +79,8 @@ export default function HeroScene({ accent, drift = 1 }) {
       frameloop="always"
       style={{ pointerEvents: 'none' }}
     >
-      <ParticleField color={color} drift={drift} />
-      <Core color={color} drift={drift} />
+      <ParticleField color={color} drift={drift} opacity={pointOpacity} />
+      <Core color={color} drift={drift} opacity={coreOpacity} />
     </Canvas>
   )
 }
