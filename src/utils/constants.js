@@ -74,7 +74,5 @@ export const basicInfo={
 }
 
 export const certificateImgs = [
-  {image: '/portfolio/images/certificates/newtoncertificate.png'},        
+  {image: '/portfolio/images/certificates/newtoncertificate.png'},
 ]
-
-export default projects;
