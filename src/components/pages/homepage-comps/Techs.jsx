@@ -1,4 +1,3 @@
-import React from "react";
 import html from "../../../assets/html.png";
 import css from "../../../assets/css.png";
 import javascript from "../../../assets/javascript.png";
@@ -99,7 +98,7 @@ const Techs = () => {
           <h2 className="text-4xl font-bold inline pb-1 border-b-4 border-primary-color/40 sm:text-5xl">
             Technologies
           </h2>
-          <p className="py-6">These are the technologies I've worked with</p>
+          <p className="py-6">These are the technologies I&apos;ve worked with</p>
         </div>
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 text-center py-8 sm:px-0">

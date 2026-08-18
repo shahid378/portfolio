@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Navbar from "./homepage-comps/Navbar"
 import Home from "./homepage-comps/Home"
 import About from "./homepage-comps/About"
@@ -7,13 +7,11 @@ import MyProjects from "./homepage-comps/MyProjects"
 import Techs from "./homepage-comps/Techs"
 import Contact from "./homepage-comps/Contact"
 import CertificateSlider from './homepage-comps/CertificateSlider'
-import certificateImgs from './../../utils/constants'
 
 const HomePage = () => {
     const certificatesImgs = [
-        {image: '/portfolio/images/certificates/newtoncertificate.png'},        
+        {image: '/portfolio/images/certificates/newtoncertificate.png'},
     ];
-    // let certificatesImgs = certificateImgs
 
 
     useEffect(() => {

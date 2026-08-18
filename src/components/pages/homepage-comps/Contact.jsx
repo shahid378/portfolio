@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from 'axios';
 import Swal from 'sweetalert2'
 
@@ -11,7 +10,7 @@ const Contact = () => {
         const formData = new FormData(event.target);
 
         axios.post('https://getform.io/f/pbgxdzla', formData)
-            .then(response => {
+            .then(() => {
                 Swal.fire({
                     icon: 'success',
                     iconColor: '#0DFC4B',
@@ -55,7 +54,7 @@ const Contact = () => {
 
                         <textarea name="message" rows="10" placeholder='Enter your message' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-primary-color' required></textarea>
 
-                        <button className='text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>Let's talk</button>
+                        <button className='text-black font-semibold bg-gradient-to-t from-green-400 to-primary-color px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>Let&apos;s talk</button>
                     </form>
                 </div>
             </div>

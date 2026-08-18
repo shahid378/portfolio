@@ -1,4 +1,3 @@
-import React from 'react'
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
 import { Link } from "react-scroll"
 import MobileSocialLinks from './MobileSocialLinks';
@@ -12,7 +11,7 @@ const Home = () => {
 
           <div className='flex flex-col justify-center items-center h-[85%] md:h-full order-2 md:order-1 md:items-start'>
             
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4'>I'm {basicInfo.name}</h1>
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-2 mt-3 md:mt-0 md:mb-4'>I&apos;m {basicInfo.name}</h1>
             <h2 className='rounded-md bg-primary-color/20 max-w-max px-6 inline text-xl md:text-3xl lg:text-4xl font-semibold text-white'>{basicInfo.profile}</h2>
             <p className='text-gray-300 py-4 max-x-md text-justify'>{basicInfo.summary}</p>
 

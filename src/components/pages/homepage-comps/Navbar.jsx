@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
 import { Link } from "react-scroll"
 import { basicInfo } from "../../../utils/constants";

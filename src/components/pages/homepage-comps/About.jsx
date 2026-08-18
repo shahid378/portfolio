@@ -1,4 +1,3 @@
-import React from 'react'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll';

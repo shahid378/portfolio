@@ -11,5 +11,8 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    // propTypes are deprecated and ignored as of React 19; this project
+    // relies on plain JSX without runtime prop validation.
+    'react/prop-types': 'off',
   },
 }

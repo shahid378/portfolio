@@ -34,6 +34,7 @@ export function ModalInfo({ SelectedProject, closeModal }) {
               <span className="text-primary-color">Demo: </span>
               <a
                 target="_blank"
+                rel="noreferrer"
                 className="hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500"
                 href={SelectedProject.demo}
               >
@@ -45,6 +46,7 @@ export function ModalInfo({ SelectedProject, closeModal }) {
               <span className="text-primary-color">Code: </span>
               <a
                 target="_blank"
+                rel="noreferrer"
                 className="hover:underline hover:underline-offset-4 hover:text-dark-green transition-all duration-500"
                 href={SelectedProject.code}
               >

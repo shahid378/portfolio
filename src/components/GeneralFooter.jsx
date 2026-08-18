@@ -1,4 +1,3 @@
-import React from 'react'
 import { basicInfo } from "../utils/constants";
 
 const GeneralFooter = () => {
@@ -6,11 +5,11 @@ const GeneralFooter = () => {
         <footer className='relative mt-auto flex flex-col items-center text-gray-300 mb-6 gap-2 md:flex-row md:justify-evenly'>
             
             <div className='flex gap-x-4 md:order-last'>
-                <a className='text-4xl hover:text-primary-color hover:animate-bounce' target='_blank' href={basicInfo.gitHub}>
+                <a className='text-4xl hover:text-primary-color hover:animate-bounce' target='_blank' rel='noreferrer' href={basicInfo.gitHub}>
                     <i className='bx bxl-github' ></i>
                 </a>
 
-                <a className='text-4xl hover:text-primary-color hover:animate-bounce' target='_blank' href={basicInfo.linkedIn}>
+                <a className='text-4xl hover:text-primary-color hover:animate-bounce' target='_blank' rel='noreferrer' href={basicInfo.linkedIn}>
                     <i className='bx bxl-linkedin-square' ></i>
                 </a>
 

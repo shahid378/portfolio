@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
@@ -50,15 +49,6 @@ const Date = styled.div`
     font-size: 10px;
   }
 `;
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
 const Description = styled.div`
   width: 100%;
   font-size: 15px;
@@ -87,7 +77,7 @@ const Skill = styled.div`
     font-size: 12px;
   }
 `;
-console.log('')
+
 const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -139,8 +129,8 @@ const ExperienceCard = ({ experience }) => {
             <Skills>
               <b>Skills:</b>
               <ItemWrapper>
-                {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                {experience?.skills?.map((skill) => (
+                  <Skill key={skill}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>
