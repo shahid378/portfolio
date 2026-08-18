@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { DEFAULT_PERSONA, PERSONA_IDS, getContent } from '@data'
 import { PersonaContext } from './usePersona'
 
@@ -29,6 +29,20 @@ export default function PersonaProvider({ children }) {
   // repaints without re-rendering the tree.
   useEffect(() => {
     document.documentElement.dataset.persona = personaId
+  }, [personaId])
+
+  // Switching persona swaps the whole page, and the two sides do not have the
+  // same sections — staying put can drop you into unrelated content or past the
+  // end of it. Jump to the top instead. Instant rather than smooth: the content
+  // cross-fades, and animating a long scroll underneath that looks broken.
+  // Skipped on first mount so ?mode=creative deep links do not fight the browser.
+  const isFirstRender = useRef(true)
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }, [personaId])
 
   const content = useMemo(() => getContent(personaId), [personaId])

@@ -110,6 +110,13 @@
     color: var(--app-surface);
   }
 
+  /* The sticky header is 4rem tall and would otherwise sit over the heading
+     you just jumped to, from nav clicks and shared #links alike. */
+  section[id],
+  #stack {
+    scroll-margin-top: 5rem;
+  }
+
   /* Editorial voice for the writing side: section headings set in serif. */
   [data-persona='creative'] h1,
   [data-persona='creative'] h2 {

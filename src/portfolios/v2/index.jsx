@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import PersonaProvider from './PersonaProvider'
 import { usePersona } from './usePersona'
@@ -16,6 +17,16 @@ import InkMotifs from './components/InkMotifs'
 // Pages returning a hard 404 for unknown paths on refresh.
 function PortfolioBody() {
   const { personaId } = usePersona()
+
+  // The browser resolves a #hash before React has rendered the sections, so a
+  // shared deep link would silently land at the top. Re-apply it once mounted.
+  useEffect(() => {
+    const id = window.location.hash.slice(1)
+    if (!id) return
+    const el = document.getElementById(id)
+    if (!el) return
+    requestAnimationFrame(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }))
+  }, [])
 
   return (
     <>
