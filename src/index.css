@@ -1,30 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Must precede the Tailwind import: @import rules have to come before any rules. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Raleway:wght@300;400;500;600;700;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+ * Persona-driven palette. Components use the semantic tokens (bg-surface,
+ * text-ink, text-accent...), and flipping data-persona on <html> repaints the
+ * whole site without re-rendering anything.
+ */
+@theme inline {
+  --color-surface: var(--app-surface);
+  --color-surface-raised: var(--app-surface-raised);
+  --color-ink: var(--app-ink);
+  --color-ink-muted: var(--app-ink-muted);
+  --color-ink-faint: var(--app-ink-faint);
+  --color-accent: var(--app-accent);
+  --color-accent-soft: var(--app-accent-soft);
+  --color-hairline: var(--app-hairline);
 
-@layer base {
-    html {
-        font-family: 'Raleway', sans-serif;
-    }
-
-    .modalCard {
-    box-shadow: 0 0 1rem 0 #86ff4b87;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-raleway: 'Raleway', ui-sans-serif, system-ui, sans-serif;
 }
 
-    @media (max-height: 620px) {
-        .h-unset {
-            height: unset !important; 
-        }
+/* Tokens kept for portfolio v1, which predates the semantic palette. */
+@theme {
+  --color-primary-color: #0dfc4b;
+  --color-light-green: rgba(142, 255, 139, 0.5);
+  --color-dark-green: #8eff8b;
+  --color-light-gray: #aeaeae;
 
-        .miniModal {
-            height: 300px !important;
-            width: auto !important;
-        }
+  --breakpoint-desktop: 1130px;
+}
+
+:root,
+[data-persona='tech'] {
+  --app-surface: #07080b;
+  --app-surface-raised: #0e1117;
+  --app-ink: #f2f5f8;
+  --app-ink-muted: #a2acbb;
+  --app-ink-faint: #5d6779;
+  --app-accent: #0dfc4b;
+  --app-accent-soft: rgba(13, 252, 75, 0.12);
+  --app-hairline: rgba(255, 255, 255, 0.09);
+}
+
+[data-persona='creative'] {
+  --app-surface: #12100c;
+  --app-surface-raised: #1b1813;
+  --app-ink: #f7f1e6;
+  --app-ink-muted: #bcae99;
+  --app-ink-faint: #7d7263;
+  --app-accent: #f0a03c;
+  --app-accent-soft: rgba(240, 160, 60, 0.14);
+  --app-hairline: rgba(255, 240, 220, 0.11);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-raleway);
+    scroll-behavior: smooth;
+    background-color: var(--app-surface);
+  }
+
+  /* Persona repaint should feel like one deliberate move, not a flash. */
+  html[data-persona] {
+    transition: background-color 500ms ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
-    
+    html[data-persona] {
+      transition: none;
+    }
+  }
 
+  ::selection {
+    background: var(--app-accent);
+    color: var(--app-surface);
+  }
 }
